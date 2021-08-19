@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+}
+.flex-grid{
+    width: 100%;
+    background: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    height: 80vh;
+    margin: auto;
+    perspective: 1000px;
+
+}
+.card{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transition: all .25s linear;
+    transform-style: preserve-3d;
+    display: grid;
+
+}
+body{
+    background-image: url("world_map.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.front,
+.back{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Lobster';
+    border-radius: 10px;
+    position: absolute;
+    border: black 3px solid;
+    text-align: center;
+}
+.front{
+    background: linear-gradient(#08aeea, #73f5e3);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back{
+    background: linear-gradient(#f6b406, #f8d703);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.container{
+
+}
